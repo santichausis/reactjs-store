@@ -1,6 +1,8 @@
 import React from 'react'
-import { Menu, Logo, NavBar, Link } from './style'
+import { Menu, Logo, NavBar, Link, CartProducts } from './style'
 import logo from './logo.png';
+import { FaShoppingCart } from 'react-icons/fa';
+
 
 const Header = () => {
     return (
@@ -8,10 +10,10 @@ const Header = () => {
             <Logo src={logo}/>
             <NavBar>
                 <Link to='#'>Lanzamientos</Link>
-                <Link to='#'>Tablas</Link>
                 <Link to='#'>Ofertas</Link>
                 <Link to='#'>Contacto</Link>
-                <Link to='#'>Carrito</Link>
+                <FaShoppingCart />
+                <CartProducts>5</CartProducts>
             </NavBar>
         </Menu>
     )

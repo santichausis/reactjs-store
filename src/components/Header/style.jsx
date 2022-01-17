@@ -1,15 +1,17 @@
 import styled from 'styled-components'
 
 const Menu = styled.header`
-  display: grid;
-  grid-template-columns: 250px 1fr;
+  display: flex;
+  justify-content: center;
 `
 const Logo = styled.img`
   width:250px;
+  padding-left: 150px;
 `
 const NavBar = styled.nav`
+  width: 900px;
   display: flex;
-  align-self: center;
+  align-items: center;
   justify-content: center;
 `
 const Link = styled.a`
@@ -18,5 +20,13 @@ const Link = styled.a`
   margin-right: 30px;
   text-transform: Uppercase;
   cursor:pointer;
+  &:hover {
+    color: #181818;
+  }
 `
-export { Menu, Logo, NavBar, Link };
+const CartProducts = styled.p`
+  position: relative;
+  top: -15px;
+  right: -10px
+`
+export { Menu, Logo, NavBar, Link, CartProducts };

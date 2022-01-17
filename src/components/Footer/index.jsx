@@ -1,10 +1,11 @@
 import React from 'react';
+import { FooterContainer, Text } from './style';
 
 const Footer = () => {
     return (
-        <div>
-            Hecho por Santiago Chausis
-        </div>
+        <FooterContainer>
+            <Text>Hecho por Santiago Chausis 🥑</Text>
+        </FooterContainer>
     );
 };
 
