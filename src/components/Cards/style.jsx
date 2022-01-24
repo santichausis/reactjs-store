@@ -8,5 +8,9 @@ const Card = styled.div`
     display: flex;
     flex-direction: column;
 `
-
-export { CardContainer, Card };
+const Image = styled.img`
+    border-radius: 10px;
+    width: 275px;
+    margin-bottom: 5px;
+`
+export { CardContainer, Card, Image };
