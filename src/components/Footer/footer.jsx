@@ -1,10 +1,11 @@
-import React from 'react';
 import { FooterContainer, Text } from './style';
 
-const Footer = () => {
+const year = new Date().getFullYear();
+
+const Footer = ({nombre}) => {
     return (
         <FooterContainer>
-            <Text>Hecho por Santiago Chausis 🥑</Text>
+            <Text>Hecho por {nombre} {year} 🚀</Text>
         </FooterContainer>
     );
 };

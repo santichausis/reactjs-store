@@ -1,12 +1,13 @@
-import Header from './components/Header';
-import Footer from './components/Footer';
+import Header from './components/Header/header';
+import Footer from './components/Footer/footer';
+import Cards from './components/Cards/cards';
 
 function App() {
   return (
     <div className='App'>
       <Header />
-      <h1>Ecommerce de Snowboard</h1>
-      <Footer />
+      <Cards></Cards>
+      <Footer nombre='Santiago Chausis' />
     </div>
   );
 }
