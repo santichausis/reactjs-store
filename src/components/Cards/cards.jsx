@@ -1,4 +1,5 @@
 import { data } from './data'
+import ItemCount from './itemCount'
 import { CardContainer, Card, Image } from './style'
 
 export default function Cards() {
@@ -10,7 +11,8 @@ export default function Cards() {
                     <div>{nombre}</div>
                     <div>{marca}</div>
                     <div>u$s {precio}</div>
-                    <div>{stock}</div>
+                    <div>Stock: {stock}</div>
+                    <ItemCount />
                 </Card>
             )}
         </CardContainer>

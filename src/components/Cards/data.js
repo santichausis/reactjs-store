@@ -18,7 +18,7 @@ export const data = [
   {
     "id": 3,
     "nombre": "Burton Hideaway Flat Top",
-    "marca": "Buton",
+    "marca": "Burton",
     "imagen": "https://www.burton.com/static/product/W22/10696108000140_1.png?impolicy=bglt&imwidth=972",
     "stock": 5,
     "precio": 419
@@ -26,7 +26,7 @@ export const data = [
   {
     "id": 4,
     "nombre": "Burton Rewind Camber",
-    "marca": "Buton",
+    "marca": "Burton",
     "imagen": "https://www.burton.com/static/product/W22/19854104000141_1.png?impolicy=bglt&imwidth=972",
     "stock": 8,
     "precio": 499
