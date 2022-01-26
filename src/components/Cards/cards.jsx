@@ -12,7 +12,7 @@ export default function Cards() {
                     <div>{marca}</div>
                     <div>u$s {precio}</div>
                     <div>Stock: {stock}</div>
-                    <ItemCount />
+                    <ItemCount/>
                 </Card>
             )}
         </CardContainer>
