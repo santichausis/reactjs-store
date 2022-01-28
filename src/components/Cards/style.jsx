@@ -2,15 +2,21 @@ import styled from 'styled-components'
 
 const CardContainer = styled.section`
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-around;
+    width: 1140px;
+    margin: 0 auto;
+    heigth: auto;
 `
 const Card = styled.div`
     display: flex;
     flex-direction: column;
+    margin: 15px 0;
 `
 const Image = styled.img`
     border-radius: 10px;
-    width: 275px;
+    width: 250px;
     margin-bottom: 5px;
 `
 const Botones = styled.button`

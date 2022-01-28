@@ -3,6 +3,7 @@ import styled from 'styled-components'
 const Menu = styled.header`
   display: flex;
   justify-content: center;
+  margin-bottom: 50px;
 `
 const Logo = styled.img`
   width:250px;

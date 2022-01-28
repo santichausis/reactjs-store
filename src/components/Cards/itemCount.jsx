@@ -1,18 +1,20 @@
 import { useState, useEffect } from "react";
 import { Botones } from './style'
-const ItemCount = ({ initial = 1 }) => {
+const ItemCount = ({ stock = 9, initial = 1 }) => {
 
     const [count, setCount] = useState(1);
 
     useEffect(() => {
         setCount(initial)
-    }, []);
+    }, [initial]);
 
     const increment = () => {
-        setCount(count + 1);
+        if (count < stock) {
+            setCount(count + 1);
+        }
     }
     const decrement = () => {
-        if (count >=2) {
+        if (count >= 2) {
             setCount(count - 1);
         };
     }

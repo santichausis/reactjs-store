@@ -1,15 +1,15 @@
 import styled from 'styled-components'
 
 const FooterContainer = styled.footer`
-    background: black; 
-    position:
+    background: black;
     height: 50px;
-    position: absolute;
-    bottom: 0px;
-    width: 100%;
+    position: inherit;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin-top: 100px;
 `
 const Text = styled.p`
-    text-align:center;
     font-size: .8rem;
     color:white;
 `
