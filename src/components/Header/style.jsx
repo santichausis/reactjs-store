@@ -15,7 +15,7 @@ const NavBar = styled.nav`
   align-items: center;
   justify-content: center;
 `
-const Link = styled.a`
+const Links = styled.a`
   font-size: 1rem;
   color: #494949;
   margin-right: 30px;
@@ -30,4 +30,4 @@ const CartProducts = styled.p`
   top: -15px;
   right: -10px
 `
-export { Menu, Logo, NavBar, Link, CartProducts };
+export { Menu, Logo, NavBar, Links, CartProducts };

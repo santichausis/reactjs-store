@@ -1,17 +1,22 @@
-import { Menu, Logo, NavBar, Link, CartProducts } from './style'
+import { BrowserRouter, NavLink } from "react-router-dom";
+import { Menu, Logo, NavBar, CartProducts, Links } from './style'
 import logo from './logo.png';
 import { FaShoppingCart } from 'react-icons/fa';
 
-const randomProducts = (Math.random() * (10 - 1 + 1) ) << 1
+const randomProducts = (Math.random() * (10 - 1 + 1)) << 1
 
 const Header = () => {
     return (
         <Menu>
-            <Logo src={logo} alt='Imagen del logo' />
+            <BrowserRouter>
+                <NavLink to='/'>
+                    <Logo src={logo} alt='Imagen del logo' />
+                </NavLink>
+            </BrowserRouter>
             <NavBar>
-                <Link to='#'>Lanzamientos</Link>
-                <Link to='#'>Ofertas</Link>
-                <Link to='#'>Contacto</Link>
+                <Links>Lanzamientos</Links>
+                <Links>Ofertas</Links>
+                <Links>Contacto</Links>
                 <FaShoppingCart />
                 <CartProducts>{randomProducts}</CartProducts>
             </NavBar>
