@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styled from 'styled-components'
 
 const CardContainer = styled.section`
@@ -41,6 +42,9 @@ const Botones = styled.button`
  transform: scale(0.9);
 }
 `
+const StyledLink = styled(Link)`
+  color: #2b2a2a;
+  text-decoration: none;
+`;
 
-
-export { CardContainer, Card, Image, Botones };
+export { CardContainer, Card, Image, Botones, StyledLink };

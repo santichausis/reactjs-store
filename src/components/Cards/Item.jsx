@@ -1,6 +1,5 @@
-import { Link, Outlet } from "react-router-dom";
-import { CardContainer, Card, Image } from './style'
-import ItemCount from './ItemCount'
+import {  Outlet } from "react-router-dom";
+import { CardContainer, Card, Image, StyledLink } from './style'
 import { data } from '../../utils/data'
 
 const Cards = () => {
@@ -9,7 +8,7 @@ const Cards = () => {
         <CardContainer>
             {data.map(({ id, imagen, nombre, marca, precio, categoria, stock }) =>
                 <Card key={id}>
-                    <Link
+                    <StyledLink
                         to={`/item/${id}`}
                         key={id}>
                         <Image src={`../assets/boards/${imagen}`} alt={nombre} />
@@ -18,8 +17,7 @@ const Cards = () => {
                         <div>u$s {precio}</div>
                         <div>Tipo de tabla: {categoria}</div>
                         <div>Stock: {stock}</div>
-                        <ItemCount />
-                    </Link>
+                    </StyledLink>
                 </Card>
             )}
             <Outlet />

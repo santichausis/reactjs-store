@@ -1,13 +1,13 @@
 import { useParams } from "react-router";
 import { data } from '../../utils/data'
+import ItemCount from "./ItemCount";
 
 export default function ItemDetail() {
-    const params = useParams();
-    const tablas = data((params.idItem));
+
 
     return (
         <div>
-            <h1>{tablas.nombre}</h1>
+            <ItemCount></ItemCount>
         </div>
     );
 }
