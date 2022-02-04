@@ -1,11 +1,11 @@
-import { FooterContainer, Text } from './style';
+import { FooterContainer, Text } from './Style';
 
 const year = new Date().getFullYear();
 
-const Footer = ({nombre}) => {
+const Footer = () => {
     return (
         <FooterContainer>
-            <Text>Hecho por {nombre} {year} 🚀</Text>
+            <Text>Hecho por Santiago Chausis {year} 🚀</Text>
         </FooterContainer>
     );
 };

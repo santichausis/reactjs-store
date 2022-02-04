@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Botones } from './style'
+import { Botones } from './Style'
 const ItemCount = ({ stock = 9, initial = 1 }) => {
 
     const [count, setCount] = useState(1);

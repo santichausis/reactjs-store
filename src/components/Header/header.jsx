@@ -1,5 +1,5 @@
-import { BrowserRouter, NavLink } from "react-router-dom";
-import { Menu, Logo, NavBar, CartProducts, Links } from './style'
+import { Link } from "react-router-dom";
+import { Menu, Logo, NavBar, CartProducts, StyledLink } from './Style'
 import logo from './logo.png';
 import { FaShoppingCart } from 'react-icons/fa';
 
@@ -7,20 +7,19 @@ const randomProducts = (Math.random() * (10 - 1 + 1)) << 1
 
 const Header = () => {
     return (
-        <Menu>
-            <BrowserRouter>
-                <NavLink to='/'>
+            <Menu>
+                <Link to='/'>
                     <Logo src={logo} alt='Imagen del logo' />
-                </NavLink>
-            </BrowserRouter>
-            <NavBar>
-                <Links>Lanzamientos</Links>
-                <Links>Ofertas</Links>
-                <Links>Contacto</Links>
-                <FaShoppingCart />
-                <CartProducts>{randomProducts}</CartProducts>
-            </NavBar>
-        </Menu>
+                </Link>
+                <NavBar>
+                    <StyledLink to="/">Home</StyledLink>
+                    <StyledLink to='/404'>404</StyledLink>
+                    <Link to='/cart'>
+                        <FaShoppingCart />
+                        <CartProducts>{randomProducts}</CartProducts>
+                    </Link>
+                </NavBar>
+            </Menu>
     )
 }
 
