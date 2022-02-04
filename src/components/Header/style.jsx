@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 const Menu = styled.header`
@@ -7,7 +8,7 @@ const Menu = styled.header`
 `
 const Logo = styled.img`
   width:250px;
-  padding-left: 150px;
+  cursor: pointer;
 `
 const NavBar = styled.nav`
   width: 900px;
@@ -15,11 +16,14 @@ const NavBar = styled.nav`
   align-items: center;
   justify-content: center;
 `
-const Links = styled.a`
+const StyledLink = styled(Link)`
+  padding: 0 10px;  
   font-size: 1rem;
   color: #494949;
   margin-right: 30px;
+  text-decoration: none;
   text-transform: Uppercase;
+  letter-spacing: 1px;
   cursor:pointer;
   &:hover {
     color: #181818;
@@ -30,4 +34,4 @@ const CartProducts = styled.p`
   top: -15px;
   right: -10px
 `
-export { Menu, Logo, NavBar, Links, CartProducts };
+export { Menu, Logo, NavBar, StyledLink, CartProducts };
