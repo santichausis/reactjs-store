@@ -2,7 +2,7 @@
 
 _Proyecto sobre tienda de snowboard_
 ### Proyecto de Santiago Chausis
-## Ajustes de SEO 🔍
+## Que tiene el sitio hasta ahora 📝
 
 * Home con la lista completa de productos.
 * Navbar con acceso al carrito
