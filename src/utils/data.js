@@ -14,7 +14,7 @@ export const data = [
     "categoria": "freeride",
     "marca": "Burton",
     "imagen": "tabla2.webp",
-    "stock": 4,
+    "stock": 0,
     "precio": 399
   },
   {
