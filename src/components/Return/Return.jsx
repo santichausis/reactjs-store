@@ -1,12 +1,10 @@
 import React from 'react';
-import { Link } from "react-router-dom";
+import { StyledSpanReturn } from '../Cards/Style';
 
-const Return = () => {
+export const Return = () => {
     return (
-        <Link to="/">
+        <StyledSpanReturn to="/">
             Volver
-        </Link>
+        </StyledSpanReturn>
     );
 };
-
-export default Return;
