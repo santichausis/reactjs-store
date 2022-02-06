@@ -8,16 +8,16 @@ import Cart from "./Cart";
 
 const Home = () => {
   return (
-    <div className='App'>
+    <>
       <Header />
-        <Routes>
-          <Route path='/' element={<Cards />} />
-            <Route path='/item/:idItem' element={<ItemDetail />} />
-            <Route path='/cart' element={<Cart />} />
-            <Route path='*' element={<NotFound />}></Route>
-        </Routes>
-      <Footer/>
-    </div>
+      <Routes>
+        <Route path='/' element={<Cards />} />
+        <Route path='/item/:idItem' element={<ItemDetail />} />
+        <Route path='/cart' element={<Cart />} />
+        <Route path='*' element={<NotFound />}></Route>
+      </Routes>
+      <Footer />
+    </>
   );
 }
 

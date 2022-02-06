@@ -13,7 +13,7 @@ const Header = () => {
                 </Link>
                 <NavBar>
                     <StyledLink to="/">Home</StyledLink>
-                    <StyledLink to='/404'>404</StyledLink>
+                    <StyledLink to='/cart'>Carrito</StyledLink>
                     <Link to='/cart'>
                         <FaShoppingCart />
                         <CartProducts>{randomProducts}</CartProducts>
