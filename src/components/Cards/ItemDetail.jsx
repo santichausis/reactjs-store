@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react";
 import { Botones, StyledReturn, DetailContainer, StyledImage, InfoContainer } from "./Style";
-import { useParams } from "react-router";
-import { data } from "../../utils/Data";
+import { data } from "../../utils/data";
 import ItemCount from "./ItemCount";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 export default function ItemDetail() {
   const { idItem } = useParams();

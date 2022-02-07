@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
 import { CardContainer, Card, Image, StyledLink, CardTitle, CardBrand, CardPrice, CardCategory } from './Style'
-import { data } from '../../utils/Data'
+import { data } from '../../utils/data'
 
 const Cards = () => {
 
