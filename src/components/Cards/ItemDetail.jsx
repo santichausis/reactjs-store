@@ -1,17 +1,20 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Botones, StyledReturn, DetailContainer, StyledImage, InfoContainer } from "./Style";
-import { data } from "../../utils/data";
+import { data } from "../../utils/Data";
 import ItemCount from "./ItemCount";
 import { Link, useParams } from "react-router-dom";
+import { CartContext } from '../../context/CartContext';
 
 export default function ItemDetail() {
+
   const { idItem } = useParams();
   const [details, setDetails] = useState({});
   const [itemCount, setItemCount] = useState(0);
-
+  const cart = useContext(CartContext);
   const onAdd = (cantidad) => {
     alert(`Seleccionaste ${cantidad} tablas de 🏂 \nMarca ${details.marca}\nPor un total de U$S ${details.precio * cantidad} 💸`);
     setItemCount(cantidad);
+    cart.addToCart(details, cantidad)
   }
 
 
@@ -30,9 +33,9 @@ export default function ItemDetail() {
         <p>Tipo de tabla: {details.categoria}</p>
         <p>{details.marca}</p>
         <p>Stock: {details.stock}</p>
-        { itemCount === 0
-        ? <ItemCount stock={details.stock} initial={1} onAdd={onAdd} />
-        : <Link to='/cart'><Botones>Ir al Checkout</Botones></Link>
+        {itemCount === 0
+          ? <ItemCount stock={details.stock} initial={1} onAdd={onAdd} />
+          : <Link to='/cart'><Botones>Ir al Checkout</Botones></Link>
         }
       </InfoContainer>
     </DetailContainer>

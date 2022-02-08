@@ -1,12 +1,12 @@
 import { Outlet } from "react-router-dom";
 import { CardContainer, Card, Image, StyledLink, CardTitle, CardBrand, CardPrice, CardCategory } from './Style'
-import { data } from '../../utils/data'
+import { data } from '../../utils/Data'
 
 const Cards = () => {
 
     return (
         <CardContainer>
-            {data.map(({ id, imagen, nombre, marca, precio, categoria, stock }) =>
+            {data.map(({ id, imagen, nombre, marca, precio, categoria }) =>
                 <Card key={id}>
                     <StyledLink
                         to={`/item/${id}`}
