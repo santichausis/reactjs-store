@@ -17,21 +17,22 @@ const NavBar = styled.nav`
   justify-content: center;
 `
 const StyledLink = styled(Link)`
-  padding: 0 10px;  
+  display:flex;
+  align-items: center;
+  padding: 10px;  
   font-size: 1rem;
   color: #494949;
   margin-right: 30px;
   text-decoration: none;
   text-transform: Uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   cursor:pointer;
   &:hover {
     color: #181818;
   }
 `
-const CartProducts = styled.p`
-  position: relative;
-  top: -15px;
-  right: -10px
+const StyledCart = styled.p`
+  padding-left: 15px;
 `
-export { Menu, Logo, NavBar, StyledLink, CartProducts };
+
+export { Menu, Logo, NavBar, StyledLink, StyledCart };
