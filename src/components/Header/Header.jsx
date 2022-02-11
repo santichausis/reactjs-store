@@ -1,11 +1,14 @@
+import { useContext } from 'react';
 import { Link } from "react-router-dom";
 import { Menu, Logo, NavBar, StyledLink, StyledCart } from './Style'
 import logo from './logo.png';
 import { FaShoppingCart } from 'react-icons/fa';
-
-const randomProducts = (Math.random() * (10 - 1 + 1)) << 1
+import { CartContext } from '../../context/CartContext';
 
 const Header = () => {
+
+    const cart = useContext(CartContext);
+
     return (
         <Menu>
             <Link to='/'>
@@ -16,7 +19,7 @@ const Header = () => {
                 <StyledLink to='/cart'>Carrito</StyledLink>
                 <StyledLink to='/cart'>
                     <FaShoppingCart />
-                    <StyledCart>{randomProducts}</StyledCart>
+                    <StyledCart>{cart.itemCantidad()}</StyledCart>
                 </StyledLink>
             </NavBar>
         </Menu>
