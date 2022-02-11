@@ -12,7 +12,6 @@ export default function ItemDetail() {
   const [itemCount, setItemCount] = useState(0);
   const cart = useContext(CartContext);
   const onAdd = (cantidad) => {
-    alert(`Seleccionaste ${cantidad} tablas de 🏂 \nMarca ${details.marca}\nPor un total de U$S ${details.precio * cantidad} 💸`);
     setItemCount(cantidad);
     cart.addToCart(details, cantidad)
   }
