@@ -1,10 +1,10 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route } from 'react-router-dom';
 import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
 import Cards from '../components/Cards/ItemList';
 import NotFound from './404'
-import ItemDetail from "../components/Cards/ItemDetail";
-import Cart from "./Cart";
+import ItemDetail from '../components/Cards/ItemDetail';
+import Cart from './Cart';
 
 const Home = () => {
   return (

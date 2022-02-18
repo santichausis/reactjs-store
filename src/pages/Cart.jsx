@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { CartContext } from '../context/CartContext';
 import { CartContainer, CartImage, CartProduct, DeleteProduct } from '../Style';
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 const Cart = () => {
     const cart = useContext(CartContext);
@@ -11,7 +11,7 @@ const Cart = () => {
             <>
                 <Link to='/'><DeleteProduct>Seguir comprando</DeleteProduct></Link>
                 {(cart.cartList.length > 0)
-                    ? <DeleteProduct type="filled" onClick={cart.removeList}>Eliminar todos los productos</DeleteProduct>
+                    ? <DeleteProduct type='filled' onClick={cart.removeList}>Eliminar todos los productos</DeleteProduct>
                     : <h2>El carrito esta vacio</h2>
                 }
             </>
@@ -24,7 +24,7 @@ const Cart = () => {
                             <p>U$S {item.precio}</p>
                             <p>Cantidad: {item.cantidadItem}</p>
                             <p>Total: U$S {`${(item.cantidadItem) * (item.precio)}`}</p>
-                            <DeleteProduct type="filled" onClick={() => cart.deleteItem(item.idItem)}>Eliminar</DeleteProduct>
+                            <DeleteProduct type='filled' onClick={() => cart.deleteItem(item.idItem)}>Eliminar</DeleteProduct>
                         </div>
                     </CartProduct>
                 ))}

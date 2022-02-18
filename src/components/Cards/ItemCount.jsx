@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
 import { Botones } from './Style'
 
 const ItemCount = ({ stock = 0, initial = 1, onAdd }) => {
@@ -25,8 +25,8 @@ const ItemCount = ({ stock = 0, initial = 1, onAdd }) => {
             <Botones onClick={increment}>+</Botones>
             {
                 stock
-                ? <Botones onClick={() => onAdd(count)}>Agregar al carrito 🛒</Botones>
-                : <Botones disabled>Agregar al carrito 🛒</Botones>
+                    ? <Botones onClick={() => onAdd(count)}>Agregar al carrito 🛒</Botones>
+                    : <Botones disabled>Agregar al carrito 🛒</Botones>
             }
         </div>
     );

@@ -1,7 +1,7 @@
-import { Outlet } from "react-router-dom";
+import { Outlet } from 'react-router-dom';
 import { CardContainer, Card, Image, StyledLink, CardTitle, CardBrand, CardPrice, CardCategory } from './Style'
 import { useEffect, useState } from 'react'
-import { firestoreFetch } from "../../utils/FirebaseFetch";
+import { firestoreFetch } from '../../utils/FirebaseFetch';
 const Cards = () => {
 
     const [datos, setDatos] = useState([]);
@@ -9,7 +9,6 @@ const Cards = () => {
     useEffect(() => {
         firestoreFetch()
             .then(result => setDatos(result))
-            .catch(error => console.log(error));
     }, [datos]);
 
     return (

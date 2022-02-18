@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 import { Menu, Logo, NavBar, StyledLink, StyledCart } from './Style'
 import logo from './logo.png';
 import { FaShoppingCart } from 'react-icons/fa';
@@ -15,7 +15,7 @@ const Header = () => {
                 <Logo src={logo} alt='Imagen del logo' />
             </Link>
             <NavBar>
-                <StyledLink to="/">Home</StyledLink>
+                <StyledLink to='/'>Home</StyledLink>
                 <StyledLink to='/cart'>Carrito</StyledLink>
                 <StyledLink to='/cart'>
                     <FaShoppingCart />
