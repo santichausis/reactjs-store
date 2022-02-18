@@ -9,7 +9,7 @@ const Cart = () => {
     return (
         <CartContainer>
             <>
-            <Link to='/'><DeleteProduct>Seguir comprando</DeleteProduct></Link>
+                <Link to='/'><DeleteProduct>Seguir comprando</DeleteProduct></Link>
                 {(cart.cartList.length > 0)
                     ? <DeleteProduct type="filled" onClick={cart.removeList}>Eliminar todos los productos</DeleteProduct>
                     : <h2>El carrito esta vacio</h2>
@@ -24,7 +24,7 @@ const Cart = () => {
                             <p>U$S {item.precio}</p>
                             <p>Cantidad: {item.cantidadItem}</p>
                             <p>Total: U$S {`${(item.cantidadItem) * (item.precio)}`}</p>
-                            <DeleteProduct type="filled" onClick={ () => cart.deleteItem(item.deleteItem)}>Eliminar</DeleteProduct>
+                            <DeleteProduct type="filled" onClick={() => cart.deleteItem(item.idItem)}>Eliminar</DeleteProduct>
                         </div>
                     </CartProduct>
                 ))}

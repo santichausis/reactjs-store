@@ -1,9 +1,9 @@
 import { useContext, useEffect, useState } from "react";
 import { Botones, StyledReturn, DetailContainer, StyledImage, InfoContainer } from "./Style";
-import { data } from "../../utils/Data";
 import ItemCount from "./ItemCount";
 import { Link, useParams } from "react-router-dom";
 import { CartContext } from '../../context/CartContext';
+import { firestoreFetchOne } from "../../utils/FirebaseFetch";
 
 export default function ItemDetail() {
 
@@ -16,11 +16,11 @@ export default function ItemDetail() {
     cart.addToCart(details, cantidad)
   }
 
-
   useEffect(() => {
-    let item = data.find((item) => item.id === +idItem);
-    setDetails(item)
-  }, [idItem]);
+    firestoreFetchOne(idItem)
+      .then(result => setDetails(result))
+      .catch(err => console.log(err))
+  }, []);
 
   return (
     <DetailContainer>

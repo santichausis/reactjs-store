@@ -7,5 +7,6 @@ _Proyecto sobre tienda de snowboard_
 * Home con la lista completa de productos.
 * Navbar con acceso al carrito
 * Página de 404 para cuando se accede a un sitio no disponible.
-* Página de detalle de producto (en construcción)
-* Página de carrito (en construcción)
+* Página de detalle de producto
+* Página de carrito
+* Uso de FireBase

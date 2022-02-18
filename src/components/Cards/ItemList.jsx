@@ -1,16 +1,24 @@
 import { Outlet } from "react-router-dom";
 import { CardContainer, Card, Image, StyledLink, CardTitle, CardBrand, CardPrice, CardCategory } from './Style'
-import { data } from '../../utils/Data'
-
+import { useEffect, useState } from 'react'
+import { firestoreFetch } from "../../utils/FirebaseFetch";
 const Cards = () => {
+
+    const [datos, setDatos] = useState([]);
+
+    useEffect(() => {
+        firestoreFetch()
+            .then(result => setDatos(result))
+            .catch(error => console.log(error));
+    }, [datos]);
 
     return (
         <CardContainer>
-            {data.map(({ id, imagen, nombre, marca, precio, categoria }) =>
+            {datos.map(({ id, imagen, nombre, marca, precio, categoria }) =>
                 <Card key={id}>
                     <StyledLink
                         to={`/item/${id}`}
-                        >
+                    >
                         <Image src={`../assets/boards/${imagen}`} alt={nombre} />
                         <CardTitle>{nombre}</CardTitle>
                         <CardBrand>{marca}</CardBrand>
