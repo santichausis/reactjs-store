@@ -20,6 +20,9 @@ const CartContextProvider = ({ children }) => {
             ]);
         } else {
             buscarItem.cantidadItem += cantidad;
+            setCartList([
+                ...cartList
+            ]);
         }
     }
 
@@ -37,8 +40,18 @@ const CartContextProvider = ({ children }) => {
         return cantidad.reduce(((previousValue, currentValue) => previousValue + currentValue), 0);
     }
 
+    const calcTotalPerItem = (idItem) => {
+        let index = cartList.map(item => item.idItem).indexOf(idItem);
+        return cartList[index].precio * cartList[index].cantidadItem;
+    }
+
+    const calcTotal = () => {
+        let totalPerItem = cartList.map(item => calcTotalPerItem(item.idItem));
+        return totalPerItem.reduce((previousValue, currentValue) => previousValue + currentValue);
+    }
+
     return (
-        <CartContext.Provider value={{ cartList, addToCart, removeList, deleteItem, itemCantidad }}>
+        <CartContext.Provider value={{ cartList, addToCart, removeList, deleteItem, itemCantidad, calcTotalPerItem, calcTotal }}>
             {children}
         </CartContext.Provider>);
 };

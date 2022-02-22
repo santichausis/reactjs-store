@@ -9,7 +9,7 @@ const Cards = () => {
     useEffect(() => {
         firestoreFetch()
             .then(result => setDatos(result))
-    }, [datos]);
+    }, []);
 
     return (
         <CardContainer>

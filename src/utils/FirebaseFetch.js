@@ -1,10 +1,15 @@
-import { doc, getDoc, query, where, collection, getDocs } from 'firebase/firestore';
+import { query, where, collection, getDocs } from '@firebase/firestore';
+import { doc, getDoc } from "firebase/firestore";
 import { db } from './FirebaseConfig'
 
 export const firestoreFetch = async (idCategory) => {
     let q;
     if (idCategory) {
-        q = query(collection(db, 'data'), where('categoryId', '==', idCategory));
+        const categoryDocRef = doc(db, 'categories', idCategory);
+        q = query(
+            collection(db, 'data'),
+            where('category', '==', categoryDocRef)
+        );
     } else {
         q = query(collection(db, 'data'));
     }
@@ -21,9 +26,10 @@ export const firestoreFetchOne = async (idItem) => {
     const docSnap = await getDoc(docRef);
 
     if (docSnap.exists()) {
-        return {
+        let result = {
             id: idItem,
             ...docSnap.data()
         }
-    }
+        return result;
+    };
 }

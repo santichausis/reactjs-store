@@ -3,6 +3,8 @@ import styled from 'styled-components'
 const CartContainer = styled.section`
     width: 1140px;
     margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 `
 const DeleteProduct = styled.button`
      margin: 10px;
@@ -21,6 +23,7 @@ const DeleteProduct = styled.button`
     :hover {
     color: white;
     box-shadow: inset 0 -100px 0 0 #725AC1;
+    }
 `
 const CartProduct = styled.div`
     display: grid;
