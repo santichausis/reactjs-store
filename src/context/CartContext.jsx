@@ -40,7 +40,7 @@ const CartContextProvider = ({ children }) => {
         return cantidad.reduce(((previousValue, currentValue) => previousValue + currentValue), 0);
     }
 
-    const calcTotalPerItem = (idItem) => {
+    function calcTotalPerItem(idItem) {
         let index = cartList.map(item => item.idItem).indexOf(idItem);
         return cartList[index].precio * cartList[index].cantidadItem;
     }

@@ -41,7 +41,7 @@ const Cart = () => {
         }
 
         createOrderInFirestore()
-            .then(result => alert('Orden procesada correctamente 🎫. Número de orden: ' + result.id + '\n\n'))
+            .then(result => alert('🎉 Orden procesada correctamente\n\n 🎫 Número de orden: ' + result.id))
             cart.removeList();
 
     }
