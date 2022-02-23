@@ -11,13 +11,12 @@ const Cart = () => {
 
     const createOrder = () => {
         const itemsForDB = cart.cartList.map(item => ({
-            idItem: item.id,
-            nombre: item.nameItem,
-            precio: item.precio
+            id: item.idItem,
+            nombre: item.nombre
         }));
 
         cart.cartList.forEach(async (item) => {
-            const itemRef = doc(db, 'data', item.idItem);
+            const itemRef = doc(db, 'data', item.id);
             await updateDoc(itemRef, {
                 stock: increment(-item.cantidadItem)
             });
@@ -36,7 +35,7 @@ const Cart = () => {
         console.log(order);
 
         const createOrderInFirestore = async () => {
-            const newOrderRef = doc(collection(db, 'orders'));
+            const newOrderRef = doc(collection(db, 'order'));
             await setDoc(newOrderRef, order);
             return newOrderRef;
         }
