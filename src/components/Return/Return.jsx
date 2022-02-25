@@ -1,4 +1,3 @@
-import React from 'react';
 import { StyledSpanReturn } from '../Cards/Style';
 
 export const Return = () => {

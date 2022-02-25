@@ -50,8 +50,22 @@ const CartContextProvider = ({ children }) => {
         return totalPerItem.reduce((previousValue, currentValue) => previousValue + currentValue);
     }
 
+    const calcItemsQuanty = () => {
+        let quanty = cartList.map(item => item.cantidadItem);
+        return quanty.reduce(((previousValue, currentValue) => previousValue + currentValue), 0);
+    }
+
     return (
-        <CartContext.Provider value={{ cartList, addToCart, removeList, deleteItem, itemCantidad, calcTotalPerItem, calcTotal }}>
+        <CartContext.Provider value={{
+            cartList,
+            addToCart,
+            removeList,
+            deleteItem,
+            itemCantidad,
+            calcTotalPerItem,
+            calcTotal,
+            calcItemsQuanty
+        }}>
             {children}
         </CartContext.Provider>);
 };

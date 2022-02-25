@@ -11,6 +11,7 @@ export default function ItemDetail() {
   const [details, setDetails] = useState({});
   const [itemCount, setItemCount] = useState(0);
   const cart = useContext(CartContext);
+
   const onAdd = (cantidad) => {
     setItemCount(cantidad);
     cart.addToCart(details, cantidad)
@@ -36,6 +37,5 @@ export default function ItemDetail() {
           : <Link to='/cart'><Botones>Ir al Checkout</Botones></Link>
         }
       </InfoContainer>
-    </DetailContainer>
-  );
+    </DetailContainer>);
 }

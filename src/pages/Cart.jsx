@@ -16,7 +16,7 @@ const Cart = () => {
         }));
 
         cart.cartList.forEach(async (item) => {
-            const itemRef = doc(db, 'data', item.id);
+            const itemRef = doc(db, 'data', item.idItem);
             await updateDoc(itemRef, {
                 stock: increment(-item.cantidadItem)
             });
@@ -42,8 +42,7 @@ const Cart = () => {
 
         createOrderInFirestore()
             .then(result => alert('🎉 Orden procesada correctamente\n\n 🎫 Número de orden: ' + result.id))
-            cart.removeList();
-
+        cart.removeList();
     }
 
     return (
